@@ -2,6 +2,9 @@
 {
   "buildCommand": "npm run build -- --mode node",
   "outputDirectory": "dist/client",
+  "serverFunctions": [
+    "api/**/*.js"
+  ],
   "env": {
     "NODE_ENV": "production"
   },

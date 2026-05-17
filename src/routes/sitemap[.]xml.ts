@@ -1,7 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-const BASE_URL = "";
+// Determine base URL from environment or request
+const BASE_URL = process.env.VERCEL_URL 
+  ? `https://${process.env.VERCEL_URL}`
+  : process.env.BASE_URL || "";
 
 const PATHS = ["/", "/about", "/academics", "/admissions", "/teachers", "/gallery", "/notices", "/results", "/contact"];
 
